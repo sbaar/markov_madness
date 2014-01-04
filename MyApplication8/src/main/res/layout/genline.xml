@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/starButton"
+            android:src="@drawable/star_selector"
+            android:background="@android:color/transparent"
+            android:paddingRight="10dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:paddingTop="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/starButton"
+            android:layout_alignBottom="@+id/starButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
