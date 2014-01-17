@@ -29,6 +29,7 @@ public class QuoteAdapter extends ArrayAdapter<QuoteModel>  {
     static class QuoteHolder{
         protected TextView textView;
         protected ImageButton imageButton;
+        protected View toolbar;
     }
 
     @Override
@@ -41,6 +42,7 @@ public class QuoteAdapter extends ArrayAdapter<QuoteModel>  {
             view = inflater.inflate(R.layout.genline, parent, false);
             final QuoteHolder quoteHolder = new QuoteHolder();
             quoteHolder.textView = (TextView) view.findViewById(R.id.textView);
+           // quoteHolder.toolbar = view.findViewById(R.id.toolbar);
             quoteHolder.imageButton = (ImageButton) view.findViewById(R.id.starButton);
             quoteHolder.imageButton.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -1823,10 +1823,6 @@ wrap_content
                     name="TextAppearance.AppCompat.Widget.PopupMenu.Large"
                     parent="TextAppearance.AppCompat.Base.Widget.PopupMenu.Large" />
 
-                <attr
-                    name="listPreferredItemHeightSmall"
-                    format="dimension" />
-
                 <declare-styleable name="MenuItem" >
 
                     <!-- The ID of the item. -->
@@ -1964,6 +1960,10 @@ wrap_content
                         name="actionProviderClass"
                         format="string" />
                 </declare-styleable>
+
+                <attr
+                    name="listPreferredItemHeightSmall"
+                    format="dimension" />
 
                 <style
                     name="TextAppearance.AppCompat.Widget.ActionBar.Subtitle.Inverse"
@@ -4593,6 +4593,11 @@ false
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
+                name="ic_launcher"
+                path="C:\Users\SBaar\AndroidStudioProjects\MyApplication8Project\MyApplication8\src\main\res\drawable-xxxhdpi\ic_launcher.png"
+                qualifiers="xxxhdpi"
+                type="drawable" />
+            <file
                 name="activity_main"
                 path="C:\Users\SBaar\AndroidStudioProjects\MyApplication8Project\MyApplication8\src\main\res\layout\activity_main.xml"
                 qualifiers=""
@@ -4600,11 +4605,6 @@ false
             <file
                 name="contact_row"
                 path="C:\Users\SBaar\AndroidStudioProjects\MyApplication8Project\MyApplication8\src\main\res\layout\contact_row.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="fragment_main"
-                path="C:\Users\SBaar\AndroidStudioProjects\MyApplication8Project\MyApplication8\src\main\res\layout\fragment_main.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -4630,7 +4630,9 @@ false
                 qualifiers="" >
                 <string name="action_settings" >Settings
                 </string>
-                <string name="app_name" >My Application8
+                <string name="title_activity_contacts" >ContactsActivity
+                </string>
+                <string name="app_name" >Markov Madness
                 </string>
                 <string name="hello_world" >Hello world!
                 </string>
@@ -4652,6 +4654,21 @@ false
                 <dimen name="activity_horizontal_margin" >64dp
                 </dimen>
             </file>
+            <file
+                name="contacts"
+                path="C:\Users\SBaar\AndroidStudioProjects\MyApplication8Project\MyApplication8\src\main\res\menu\contacts.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="activity_contacts"
+                path="C:\Users\SBaar\AndroidStudioProjects\MyApplication8Project\MyApplication8\src\main\res\layout\activity_contacts.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_contacts"
+                path="C:\Users\SBaar\AndroidStudioProjects\MyApplication8Project\MyApplication8\src\main\res\layout\fragment_contacts.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="C:\Users\SBaar\AndroidStudioProjects\MyApplication8Project\MyApplication8\build\res\rs\debug" />
     </dataSet>

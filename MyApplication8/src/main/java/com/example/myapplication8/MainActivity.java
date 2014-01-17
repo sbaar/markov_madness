@@ -1,5 +1,6 @@
 package com.example.myapplication8;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -13,18 +14,20 @@ import android.widget.AbsListView;
 import android.widget.ListView;
 
 import java.util.List;
-
 public class MainActivity extends ActionBarActivity {
-
+    String number = "-1";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Intent i = getIntent();
+         number = i.getStringExtra("number");
         if (savedInstanceState == null) {
 
             getAllSms();
-            getContacts();
+           // Cursor cursor = getContacts();
+
+
         }
     }
 
@@ -48,18 +51,26 @@ public class MainActivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    public void getContacts(){
-        Cursor cursor = getContentResolver().query(ContactsContract.Contacts.CONTENT_URI,null, null, null, null);
+    public Cursor getContacts() {
+        // Run query
+        Uri uri = ContactsContract.Contacts.CONTENT_URI;
+        String[] projection = new String[] { ContactsContract.Contacts._ID,
+                ContactsContract.Contacts.DISPLAY_NAME };
+        String selection = ContactsContract.Contacts.IN_VISIBLE_GROUP + " = '"
+                + ("1") + "'";
+        String[] selectionArgs = null;
+        String sortOrder = ContactsContract.Contacts.DISPLAY_NAME
+                + " COLLATE LOCALIZED ASC";
 
-        while (cursor.moveToNext()) {
-            String contactId = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts._ID));
-            String name      = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
-                    Log.d("contact", contactId + " " + name);         }
-        cursor.close();
+
+        return managedQuery(uri, projection, selection, selectionArgs,
+                sortOrder);
     }
     public  void getAllSms(){
-        Uri uri = Uri.parse("content://sms/sent");
-        Cursor c=getContentResolver().query(uri, null, null, null, null);
+        Uri uri = Uri.parse("content://sms/");
+        String selection = null;
+        if (number.equals("-1") == false) selection = " address = '" +number+ "'";
+        Cursor c=getContentResolver().query(uri, null, selection, null, null);
         startManagingCursor(c);
 
         String[] body = new String[c.getCount()];
@@ -91,7 +102,7 @@ public class MainActivity extends ActionBarActivity {
                     //arr.addAll(m.generate(1, 10, 20));
                     //adapter.notifyDataSetChanged();
                     GenTask task = new GenTask(m, genArray, adapter);
-                    task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                    task.execute();
                     Log.d("time end", "");
                 }
             });

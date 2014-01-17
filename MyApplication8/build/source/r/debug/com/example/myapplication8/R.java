@@ -880,12 +880,14 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f07002f;
         public static final int action_mode_bar_stub=0x7f07002e;
         public static final int action_mode_close_button=0x7f070022;
-        public static final int action_settings=0x7f070046;
+        public static final int action_settings=0x7f070049;
         public static final int activity_chooser_view_content=0x7f070023;
         public static final int always=0x7f07000f;
         public static final int beginning=0x7f07000a;
         public static final int checkbox=0x7f07002b;
         public static final int collapseActionView=0x7f070011;
+        public static final int contactNameView=0x7f070046;
+        public static final int contactsView=0x7f070043;
         public static final int container=0x7f070042;
         public static final int default_activity_button=0x7f070026;
         public static final int dialog=0x7f070012;
@@ -900,9 +902,10 @@ containing a value of this type.
         public static final int icon=0x7f070028;
         public static final int ifRoom=0x7f07000e;
         public static final int image=0x7f070025;
+        public static final int imageView=0x7f070045;
         public static final int left_icon=0x7f070031;
         public static final int listMode=0x7f070001;
-        public static final int listView=0x7f070043;
+        public static final int listView=0x7f070044;
         public static final int list_item=0x7f070027;
         public static final int middle=0x7f07000b;
         public static final int never=0x7f07000d;
@@ -928,10 +931,10 @@ containing a value of this type.
         public static final int showHome=0x7f070004;
         public static final int showTitle=0x7f070006;
         public static final int split_action_bar=0x7f07001c;
-        public static final int starButton=0x7f070044;
+        public static final int starButton=0x7f070047;
         public static final int submit_area=0x7f07003f;
         public static final int tabMode=0x7f070002;
-        public static final int textView=0x7f070045;
+        public static final int textView=0x7f070048;
         public static final int title=0x7f070029;
         public static final int title_container=0x7f070030;
         public static final int top_action_bar=0x7f07001e;
@@ -967,14 +970,16 @@ containing a value of this type.
         public static final int abc_screen=0x7f030015;
         public static final int abc_search_dropdown_item_icons_2line=0x7f030016;
         public static final int abc_search_view=0x7f030017;
-        public static final int activity_main=0x7f030018;
-        public static final int contact_row=0x7f030019;
-        public static final int fragment_main=0x7f03001a;
-        public static final int genline=0x7f03001b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001c;
+        public static final int activity_contacts=0x7f030018;
+        public static final int activity_main=0x7f030019;
+        public static final int contact_row=0x7f03001a;
+        public static final int fragment_contacts=0x7f03001b;
+        public static final int genline=0x7f03001c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
     }
     public static final class menu {
-        public static final int main=0x7f0c0000;
+        public static final int contacts=0x7f0c0000;
+        public static final int main=0x7f0c0001;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f0a0000;
@@ -993,6 +998,7 @@ containing a value of this type.
         public static final int action_settings=0x7f0a000d;
         public static final int app_name=0x7f0a000e;
         public static final int hello_world=0x7f0a000f;
+        public static final int title_activity_contacts=0x7f0a0010;
     }
     public static final class style {
         /**  Customize your theme here. 
